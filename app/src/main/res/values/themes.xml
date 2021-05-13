@@ -13,4 +13,20 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="number">
+        <item name="android:layout_width">@dimen/numbersize</item>
+        <item name="android:layout_height">@dimen/numbersize</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="elevation">32dp</item>
+    </style>
+    <style name="filed">
+        <item name="android:layout_width">@dimen/kk</item>
+        <item name="android:layout_height">@dimen/kk</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="elevation">32dp</item>
+    </style>
 </resources>
