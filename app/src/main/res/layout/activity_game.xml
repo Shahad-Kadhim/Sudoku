@@ -5,488 +5,773 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Game">
+<TextView
+    android:id="@+id/resualt"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:gravity="center"
+    android:text="dd"
+    android:background="#D1CCDD"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:textSize="44sp"
+    android:onClick="hide"
+    android:visibility="invisible"
+    app:layout_constraintDimensionRatio="2:1"/>
 
     <GridLayout
         android:id="@+id/grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="100dp"
         android:columnCount="9"
         android:rowCount="9"
-        android:layout_marginTop="100dp"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintBottom_toTopOf="@id/numbers"
+        app:layout_constraintBottom_toTopOf="@id/num_one"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/r1c1"
+            android:tag="00"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click" />
 
         <TextView
             android:id="@+id/r1c2"
+            android:tag="01"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click" />
 
         <TextView
+            android:tag="02"
             android:id="@+id/r1c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click" />
 
         <TextView
             android:id="@+id/r1c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:tag="03"
+            android:background="#D1CCDD"
+            android:onClick="click" />
 
         <TextView
             android:id="@+id/r1c5"
+            android:tag="04"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click" />
 
         <TextView
             android:id="@+id/r1c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:tag="05"
+            android:background="#D1CCDD"
+            android:onClick="click" />
 
         <TextView
             android:id="@+id/r1c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:tag="06"
+            android:background="#D1CCDD"
+            android:onClick="click" />
 
         <TextView
             android:id="@+id/r1c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:tag="07"
+            android:background="#D1CCDD"
+            android:onClick="click" />
 
         <TextView
             android:id="@+id/r1c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="08" />
 
         <TextView
             android:id="@+id/r2c1"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="10" />
 
         <TextView
             android:id="@+id/r2c2"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="11" />
 
         <TextView
             android:id="@+id/r2c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="12" />
 
         <TextView
             android:id="@+id/r2c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="13" />
 
         <TextView
             android:id="@+id/r2c5"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="14" />
 
         <TextView
             android:id="@+id/r2c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="15" />
 
         <TextView
             android:id="@+id/r2c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="16" />
 
         <TextView
             android:id="@+id/r2c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="17" />
 
         <TextView
             android:id="@+id/r2c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="18" />
 
         <TextView
             android:id="@+id/r3c1"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="20" />
 
         <TextView
             android:id="@+id/r3c2"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="21" />
 
         <TextView
             android:id="@+id/r3c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="22" />
 
         <TextView
             android:id="@+id/r3c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="23" />
 
         <TextView
             android:id="@+id/r3c5"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="24" />
 
         <TextView
             android:id="@+id/r3c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="25" />
 
         <TextView
             android:id="@+id/r3c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="26" />
 
         <TextView
             android:id="@+id/r3c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="27" />
 
         <TextView
             android:id="@+id/r3c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="28" />
+
         <TextView
             android:id="@+id/r4c1"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="30" />
 
         <TextView
             android:id="@+id/r4c2"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="31" />
 
         <TextView
             android:id="@+id/r4c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="32" />
 
         <TextView
             android:id="@+id/r4c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="33" />
 
         <TextView
             android:id="@+id/r4c5"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="34" />
 
         <TextView
             android:id="@+id/r4c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="35" />
 
         <TextView
             android:id="@+id/r4c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="36" />
 
         <TextView
             android:id="@+id/r4c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="37" />
 
         <TextView
             android:id="@+id/r4c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="38" />
 
         <TextView
             android:id="@+id/r5c1"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="40" />
 
         <TextView
             android:id="@+id/r5c2"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="41" />
 
         <TextView
             android:id="@+id/r5c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="42" />
 
         <TextView
             android:id="@+id/r5c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="43" />
 
         <TextView
             android:id="@+id/r5c5"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="44" />
 
         <TextView
             android:id="@+id/r5c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="45" />
 
         <TextView
             android:id="@+id/r5c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="46" />
 
         <TextView
             android:id="@+id/r5c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="47" />
 
         <TextView
             android:id="@+id/r5c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="48" />
 
         <TextView
             android:id="@+id/r6c1"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="50" />
 
         <TextView
             android:id="@+id/r6c2"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="51" />
 
         <TextView
             android:id="@+id/r6c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="52" />
 
         <TextView
             android:id="@+id/r6c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="53" />
 
         <TextView
             android:id="@+id/r6c5"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="54" />
 
         <TextView
             android:id="@+id/r6c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="55" />
 
         <TextView
             android:id="@+id/r6c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="56" />
 
         <TextView
             android:id="@+id/r6c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="57" />
 
         <TextView
             android:id="@+id/r6c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="58" />
+
         <TextView
             android:id="@+id/r7c1"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="60" />
 
         <TextView
             android:id="@+id/r7c2"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="61" />
 
         <TextView
             android:id="@+id/r7c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="62" />
 
         <TextView
             android:id="@+id/r7c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="63" />
 
         <TextView
             android:id="@+id/r7c5"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="64" />
 
         <TextView
             android:id="@+id/r7c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="65" />
 
         <TextView
             android:id="@+id/r7c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="66" />
 
         <TextView
             android:id="@+id/r7c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="67" />
 
         <TextView
             android:id="@+id/r7c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="68" />
 
         <TextView
             android:id="@+id/r8c1"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="70" />
 
         <TextView
             android:id="@+id/r8c2"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="71" />
 
         <TextView
             android:id="@+id/r8c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="72" />
 
         <TextView
             android:id="@+id/r8c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="73" />
 
         <TextView
             android:id="@+id/r8c5"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="74" />
 
         <TextView
             android:id="@+id/r8c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="75" />
 
         <TextView
             android:id="@+id/r8c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="76" />
 
         <TextView
             android:id="@+id/r8c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="77" />
 
         <TextView
             android:id="@+id/r8c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="78" />
 
         <TextView
             android:id="@+id/r9c1"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="80" />
 
         <TextView
             android:id="@+id/r9c2"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="81" />
 
         <TextView
             android:id="@+id/r9c3"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="82" />
 
         <TextView
             android:id="@+id/r9c4"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="83" />
 
         <TextView
             android:id="@+id/r9c5"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="84" />
 
         <TextView
             android:id="@+id/r9c6"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="85" />
 
         <TextView
             android:id="@+id/r9c7"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="86" />
 
         <TextView
             android:id="@+id/r9c8"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="87" />
 
         <TextView
             android:id="@+id/r9c9"
             style="@style/filed"
-            android:background="#D1CCDD" />
+            android:background="#D1CCDD"
+            android:onClick="click"
+            android:tag="88" />
 
 
     </GridLayout>
-    <GridLayout
-        android:id="@+id/numbers"
+
+    <TextView
+        android:id="@+id/num_one"
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="82dp"
+        android:background="#ECE5FB"
+        android:onClick="setNumber"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@id/num_six"
+        app:layout_constraintEnd_toStartOf="@+id/num_two"
+        app:layout_constraintStart_toStartOf="@id/grid"
+        app:layout_constraintTop_toBottomOf="@id/grid" />
+
+    <TextView
+        android:id="@+id/num_two"
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+        android:onClick="setNumber"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="@id/num_one"
+        app:layout_constraintEnd_toStartOf="@+id/num_three"
+        app:layout_constraintStart_toEndOf="@+id/num_one"
+        app:layout_constraintTop_toTopOf="@id/num_one" />
+
+    <TextView
+        android:id="@+id/num_three"
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+        android:onClick="setNumber"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="@id/num_one"
+        app:layout_constraintEnd_toStartOf="@+id/num_four"
+        app:layout_constraintStart_toEndOf="@+id/num_two"
+        app:layout_constraintTop_toTopOf="@id/num_one" />
+
+    <TextView
+        android:id="@+id/num_four"
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+        android:onClick="setNumber"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="@id/num_one"
+        app:layout_constraintEnd_toStartOf="@+id/num_five"
+        app:layout_constraintStart_toEndOf="@+id/num_three"
+        app:layout_constraintTop_toTopOf="@id/num_one" />
+
+    <TextView
+        android:id="@+id/num_five"
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+        android:onClick="setNumber"
+        android:text="5"
+        app:layout_constraintBottom_toBottomOf="@id/num_one"
+        app:layout_constraintEnd_toEndOf="@id/grid"
+        app:layout_constraintStart_toEndOf="@+id/num_four"
+        app:layout_constraintTop_toTopOf="@id/num_one" />
+
+    <TextView
+        android:id="@+id/num_six"
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+        android:onClick="setNumber"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@id/play_computer"
+        app:layout_constraintEnd_toEndOf="@id/num_one"
+        app:layout_constraintStart_toStartOf="@id/num_one"
+        app:layout_constraintTop_toBottomOf="@id/num_one" />
+
+    <TextView
+        android:id="@+id/num_seven"
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+        android:onClick="setNumber"
+        android:text="7"
+        app:layout_constraintBottom_toBottomOf="@id/num_six"
+        app:layout_constraintEnd_toEndOf="@id/num_two"
+        app:layout_constraintStart_toStartOf="@id/num_two"
+        app:layout_constraintTop_toTopOf="@id/num_six" />
+
+    <TextView
+        android:id="@+id/num_eight"
+
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+        android:onClick="setNumber"
+        android:text="8"
+        app:layout_constraintBottom_toBottomOf="@id/num_six"
+
+        app:layout_constraintEnd_toEndOf="@id/num_three"
+        app:layout_constraintStart_toStartOf="@id/num_three"
+        app:layout_constraintTop_toTopOf="@id/num_six" />
+
+    <TextView
+        android:id="@+id/num_nine"
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+
+        android:onClick="setNumber"
+        android:text="9"
+        app:layout_constraintBottom_toBottomOf="@id/num_six"
+        app:layout_constraintEnd_toEndOf="@id/num_four"
+        app:layout_constraintStart_toStartOf="@id/num_four"
+        app:layout_constraintTop_toTopOf="@id/num_six" />
+
+    <TextView
+        android:id="@+id/delete"
+
+        style="@style/number"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ECE5FB"
+        android:text="X"
+        app:layout_constraintBottom_toBottomOf="@id/num_six"
+        app:layout_constraintEnd_toEndOf="@id/num_five"
+        app:layout_constraintStart_toStartOf="@id/num_five"
+        app:layout_constraintTop_toTopOf="@id/num_six" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_computer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:columnCount="5"
-        android:rowCount="2"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/buttton"
+        android:backgroundTint="@color/white"
+        android:enabled="false"
+        android:onClick="playComputer"
+        android:paddingHorizontal="24dp"
+        android:text="play "
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/grid"
-        app:layout_constraintStart_toStartOf="@id/grid"
-        app:layout_constraintTop_toBottomOf="@id/grid">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_six" />
 
-        <TextView
-            android:id="@+id/num_one"
-            style="@style/number"
-            android:text="1" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/buttton"
+        android:backgroundTint="@color/white"
+        android:enabled="false"
+        android:onClick="playAgain"
+        android:paddingHorizontal="24dp"
+        android:text="play again"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_six" />
 
-        <TextView
-            android:id="@+id/num_two"
-            style="@style/number"
-            android:text="2" />
-
-        <TextView
-            android:id="@+id/num_three"
-            style="@style/number"
-            android:text="3" />
-
-        <TextView
-            android:id="@+id/num_four"
-            style="@style/number"
-            android:text="4" />
-
-        <TextView
-            android:id="@+id/num_five"
-            style="@style/number"
-            android:text="5" />
-
-        <TextView
-            android:id="@+id/num_six"
-            style="@style/number"
-            android:text="6" />
-
-        <TextView
-            android:id="@+id/num_seven"
-            style="@style/number"
-            android:text="7" />
-
-        <TextView
-            android:id="@+id/num_eight"
-            style="@style/number"
-            android:text="8" />
-
-        <TextView
-            android:id="@+id/num_nine"
-            style="@style/number"
-            android:text="9" />
-
-        <TextView
-            android:id="@+id/delete"
-            style="@style/number"
-            android:text="X" />
-
-
-    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

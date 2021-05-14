@@ -14,12 +14,11 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="number">
-        <item name="android:layout_width">@dimen/numbersize</item>
-        <item name="android:layout_height">@dimen/numbersize</item>
-        <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_margin">5dp</item>
         <item name="elevation">32dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:enabled">false</item>
     </style>
     <style name="filed">
         <item name="android:layout_width">@dimen/kk</item>
